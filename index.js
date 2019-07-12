@@ -6,21 +6,21 @@ var faIcons = function(path, options) {
 		...options,
 	};
 
-	var base = fspath.basename(path);
+	var base = fspath.basename(path).toLowerCase();
 	return settings.class + ' ' + faIcons.index.find(i => i.re.test(base)).icon;
 };
 
 faIcons.index = [
 	{re: /\.(avi|mpg|mp4)$/, icon: 'fa-file-video'},
-	{re: /\.(bmp|jpg|gif|png|webm)$/, icon: 'fa-file-image'},
-	{re: /\.(bz2|gz|gzip|rar|tar|zip)$/, icon: 'fa-file-archive'},
-	{re: /\.(c|js|r|ts|vbs)$/, icon: 'fa-file-code'},
+	{re: /\.(bmp|jpe?g|gif|png|webm)$/, icon: 'fa-file-image'},
+	{re: /\.(bz2?|gz|gzip|rar|tar|zip)$/, icon: 'fa-file-archive'},
+	{re: /\.(c|css|html|js|r|ts|vbs)$/, icon: 'fa-file-code'},
 	{re: /\.(csv)$/, icon: 'fa-file-csv'},
 	{re: /\.(doc)$/, icon: 'fa-file-word'},
-	{re: /\.(mp3|wav)$/, icon: 'fa-file-audio'},
+	{re: /\.(mp3|wave?)$/, icon: 'fa-file-audio'},
 	{re: /\.(pdf)$/, icon: 'fa-file-pdf'},
-	{re: /\.(ppt)$/, icon: 'fa-file-powerpoint'},
-	{re: /\.(tsv|xls)$/, icon: 'fa-file-spreadsheet'},
+	{re: /\.(ppt|ppx)$/, icon: 'fa-file-powerpoint'},
+	{re: /\.(tsv|xlsx?)$/, icon: 'fa-file-spreadsheet'},
 	{re: /./, icon: 'fa-file'},
 ];
 

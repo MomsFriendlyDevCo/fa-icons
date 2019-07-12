@@ -1,6 +1,6 @@
 {
   "name": "@momsfriendlydevco/fa-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module which returns the closest FontAwesome class to a file name",
   "main": "index.js",
   "directories": {
